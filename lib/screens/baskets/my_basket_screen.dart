@@ -30,9 +30,7 @@ class _MyBasketScreenState extends State<MyBasketScreen> {
           ElevatedButton(onPressed: (){}, child: Text("Complete Order"))
         ],
       ),
-      body: SafeArea(
-        child: myBody(),
-      ),
+      body: myBody(),
     );
   }
 

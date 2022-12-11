@@ -29,10 +29,10 @@ class BasketController extends ChangeNotifier{
     print("fonk çalıştı");
   }
 
-  removeFromBasket(String basketItemId){
-        var response= genericService.generateHttpDeleteWithQuery(basketItemId, GlobalVariables.apiUrl+"Baskets/");
+  void removeFromBasket(String basketItemId){
+        genericService.generateHttpDeleteWithQuery(basketItemId, GlobalVariables.apiUrl+"Baskets/");
+        getBasket();
         notifyListeners();
-        return response;
   }
 
 

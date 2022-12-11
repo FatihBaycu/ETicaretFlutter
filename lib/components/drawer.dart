@@ -1,3 +1,4 @@
+import 'package:e_ticaret_flutter/screens/orders/my_orders_screen.dart';
 import 'package:flutter/material.dart';
 
 MyDrawer(BuildContext context) {
@@ -21,6 +22,9 @@ MyDrawer(BuildContext context) {
             ),
           ),
         ),
-        ListTile(title: Text("My Orders"), onTap: () => {}),
+        ListTile(title: Text("My Orders"), onTap: ()  {
+                  Navigator.push(context,MaterialPageRoute(
+                builder: (context) => MyOrderScreen()));
+        }),
       ]));
 }

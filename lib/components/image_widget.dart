@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 imageWidget(String url) {
+  print(url);
   return Image.network(
     url,
-    fit: BoxFit.fill,
+    fit: BoxFit.contain,
     loadingBuilder:
         (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
       if (loadingProgress == null) return child;

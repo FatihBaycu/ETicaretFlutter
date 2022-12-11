@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:e_ticaret_flutter/controller/basket_controller.dart';
+import 'package:e_ticaret_flutter/controller/order_controller.dart';
 import 'package:e_ticaret_flutter/controller/product_controller.dart';
 import 'package:e_ticaret_flutter/screens/products/product_list_screen.dart';
 import 'package:e_ticaret_flutter/services/auths/auth_service.dart';
@@ -18,6 +19,7 @@ HttpOverrides.global =  MyHttpOverrides();
       ChangeNotifierProvider(create: (_) => UserService()),
       ChangeNotifierProvider(create: (_) => ProductController()),
       ChangeNotifierProvider(create: (_) => BasketController()),
+      ChangeNotifierProvider(create: (_) => OrderController()),
     ],
     child: const MyApp(),
   ));
